@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "dev31-mobile",
+    "slug": "dev31-mobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "dev31-mobile"
+}
