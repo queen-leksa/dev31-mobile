@@ -1,10 +1,19 @@
 import React from "react";
-import {View, Text, StyleSheet} from "react-native";
+import {View, Button, StyleSheet} from "react-native";
 
-export default function Navigation() {
+export default function Navigation({navigation}) {
     return (
         <View style={styles.nav}>
-            <Text style={styles.text}>Navigation</Text>
+            <Button
+                title="Main"
+                onPress={() => navigation.navigate("Main")}
+                color="#fff"
+            />
+            <Button
+                title="Page"
+                onPress={() => navigation.navigate("Page", {text: "This is page", title: "Page"})}
+                color="#fff"
+            />
         </View>
     )
 }
@@ -12,6 +21,7 @@ export default function Navigation() {
 const styles = StyleSheet.create({
     nav: {
         height: 50,
+        flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
         paddingLeft: 12,
@@ -19,8 +29,5 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: "#fff",
         borderStyle: "solid"
-    },
-    text: {
-        color: "#fff"
     }
 })

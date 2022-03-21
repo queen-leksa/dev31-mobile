@@ -1,10 +1,10 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
 
-export default function Title() {
+export default function Title({ttl}) {
     return (
         <View style={styles.block}>
-            <Text style={styles.caption}>Title</Text>
+            <Text style={styles.caption}>{ttl}</Text>
         </View>
     )
 }
